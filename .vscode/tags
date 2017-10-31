@@ -1,0 +1,68 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Axes3D	../ModelTest\FerrisWheel.py	/^from mpl_toolkits.mplot3d import Axes3D$/;"	kind:namespace	line:6
+Axes3D	../ModelTest\test1.py	/^from mpl_toolkits.mplot3d import Axes3D$/;"	kind:namespace	line:6
+FerrisWheel.py	../ModelTest\FerrisWheel.py	1;"	kind:file	line:1
+a	../ModelTest\test1.py	/^a = np.arange(1, 5, 0.1)$/;"	kind:variable	line:26
+angle	../ModelTest\FerrisWheel.py	/^angle = 2 * np.pi \/ drone_number$/;"	kind:variable	line:11
+approchingForDragon	../ModelTest\vanished dragon.py	/^def approchingForDragon(start_x, start_y, end_x, end_y, speed, t):$/;"	kind:function	line:64
+b	../ModelTest\test1.py	/^b = np.linspace(1, 101, 40)$/;"	kind:variable	line:28
+bore.py	../ModelTest\bore.py	1;"	kind:file	line:1
+center	../ModelTest\FerrisWheel.py	/^center = {}$/;"	kind:variable	line:13
+drone_id	../ModelTest\vanished dragon.py	/^drone_id = np.arange(1, 11)$/;"	kind:variable	line:6
+drone_number	../ModelTest\FerrisWheel.py	/^drone_number = 10 $/;"	kind:variable	line:9
+drone_number	../ModelTest\vanished dragon.py	/^drone_number = 10$/;"	kind:variable	line:7
+drone_speed	../ModelTest\FerrisWheel.py	/^drone_speed = 3$/;"	kind:variable	line:10
+drone_speed	../ModelTest\vanished dragon.py	/^drone_speed = 3$/;"	kind:variable	line:8
+end_x	../ModelTest\vanished dragon.py	/^        end_x = points[ix] + ((points[fx] - points[ix]) * j )$/;"	kind:variable	line:81
+end_y	../ModelTest\vanished dragon.py	/^        end_y = points[iy] + ((points[fy] - points[iy]) * j )$/;"	kind:variable	line:86
+f	../ModelTest\test1.py	/^def f(x):$/;"	kind:function	line:13
+f_approach	../ModelTest\FerrisWheel.py	/^def f_approach(start_x, start_y, end_x, end_y, speed, t):$/;"	kind:function	line:45
+f_approach_wait	../ModelTest\FerrisWheel.py	/^def f_approach_wait(start_x, start_y, end_x, end_y, speed, t, w):$/;"	kind:function	line:60
+f_circle_x	../ModelTest\FerrisWheel.py	/^def f_circle_x(drone_id, t):$/;"	kind:function	line:37
+f_circle_y	../ModelTest\FerrisWheel.py	/^def f_circle_y(drone_id, t):$/;"	kind:function	line:41
+f_finalPos_x	../ModelTest\FerrisWheel.py	/^def f_finalPos_x(drone_id):$/;"	kind:function	line:29
+f_finalPos_y	../ModelTest\FerrisWheel.py	/^def f_finalPos_y(drone_id):$/;"	kind:function	line:33
+f_inital_x	../ModelTest\FerrisWheel.py	/^def f_inital_x(drone_id, n,d):$/;"	kind:function	line:26
+func	../ModelTest\test1.py	/^def func(x):$/;"	kind:function	line:9
+fx	../ModelTest\test1.py	/^def fx(x):$/;"	kind:function	line:17
+fx	../ModelTest\vanished dragon.py	/^    fx = fx + 2$/;"	kind:variable	line:99
+fx	../ModelTest\vanished dragon.py	/^fx = 3$/;"	kind:variable	line:60
+fy	../ModelTest\test1.py	/^def fy(x):$/;"	kind:function	line:21
+fy	../ModelTest\vanished dragon.py	/^    fy = fy + 2$/;"	kind:variable	line:101
+fy	../ModelTest\vanished dragon.py	/^fy = 4$/;"	kind:variable	line:62
+i	../ModelTest\vanished dragon.py	/^        i = 3$/;"	kind:variable	line:93
+ix	../ModelTest\vanished dragon.py	/^    ix = ix + 2$/;"	kind:variable	line:98
+ix	../ModelTest\vanished dragon.py	/^ix = 1$/;"	kind:variable	line:59
+iy	../ModelTest\vanished dragon.py	/^    iy = iy + 2$/;"	kind:variable	line:100
+iy	../ModelTest\vanished dragon.py	/^iy = 2$/;"	kind:variable	line:61
+j	../ModelTest\vanished dragon.py	/^        j = j + 0.1 $/;"	kind:variable	line:96
+j	../ModelTest\vanished dragon.py	/^j = 0.1$/;"	kind:variable	line:76
+matplotlib	../ModelTest\FerrisWheel.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+matplotlib	../ModelTest\bore.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+matplotlib	../ModelTest\test1.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+matplotlib	../ModelTest\vanished dragon.py	/^import matplotlib$/;"	kind:namespace	line:1
+matplotlib	../ModelTest\vanished dragon.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:2
+np	../ModelTest\FerrisWheel.py	/^import numpy as np$/;"	kind:namespace	line:2
+np	../ModelTest\bore.py	/^import numpy as np$/;"	kind:namespace	line:2
+np	../ModelTest\test1.py	/^import numpy as np$/;"	kind:namespace	line:2
+np	../ModelTest\vanished dragon.py	/^import numpy as np$/;"	kind:namespace	line:4
+num	../ModelTest\vanished dragon.py	/^num = 1$/;"	kind:variable	line:9
+plt	../ModelTest\FerrisWheel.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+plt	../ModelTest\bore.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+plt	../ModelTest\test1.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+plt	../ModelTest\vanished dragon.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:2
+points	../ModelTest\vanished dragon.py	/^points = []$/;"	kind:variable	line:10
+r	../ModelTest\FerrisWheel.py	/^r = 50$/;"	kind:variable	line:16
+return_pos	../ModelTest\FerrisWheel.py	/^def return_pos(x, y):$/;"	kind:function	line:19
+return_pos	../ModelTest\vanished dragon.py	/^def return_pos(x, y):$/;"	kind:function	line:53
+scipy	../ModelTest\vanished dragon.py	/^import scipy$/;"	kind:namespace	line:3
+start_time	../ModelTest\FerrisWheel.py	/^def start_time(id):$/;"	kind:function	line:69
+t	../ModelTest\vanished dragon.py	/^        t = np.arange(0, 10, 0.001)$/;"	kind:variable	line:92
+test1.py	../ModelTest\test1.py	1;"	kind:file	line:1
+vanished dragon.py	../ModelTest\vanished dragon.py	1;"	kind:file	line:1
+z	../ModelTest\test1.py	/^z = np.arange(0, 2 * np.pi, 0.01)$/;"	kind:variable	line:47
