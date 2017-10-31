@@ -4,16 +4,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 # 3D
 from mpl_toolkits.mplot3d import Axes3D
+from AerialShowMap import *
 
-
-drone_number = 10
-drone_speed = 3
-angle = 2 * np.pi / drone_number
-
-center = {}
-center['x'] = 0
-center['y'] = 200
-r = 50
+angle = 2 * np.pi / DRONE_NUMBER
 
 
 def return_pos(x, y):
@@ -28,19 +21,19 @@ def f_inital_x(drone_id, n, d):
 
 
 def f_finalPos_x(drone_id):
-    return center['x'] + r * np.cos(angle * drone_id)
+    return CENTER['x'] + R * np.cos(angle * drone_id)
 
 
 def f_finalPos_y(drone_id):
-    return center['y'] + r * np.sin(angle * drone_id)
+    return CENTER['y'] + R * np.sin(angle * drone_id)
 
 
 def f_circle_x(drone_id, t):
-    return center['x'] + r * np.cos(angle * drone_id + drone_speed / r * t)
+    return CENTER['x'] + R * np.cos(angle * drone_id + DRONE_SPEED / R * t)
 
 
 def f_circle_y(drone_id, t):
-    return center['y'] + r * np.sin(angle * drone_id + drone_speed / r * t)
+    return CENTER['y'] + R * np.sin(angle * drone_id + DRONE_SPEED / R * t)
 
 
 def f_approach(start_x, start_y, end_x, end_y, speed, t):
@@ -73,18 +66,18 @@ def start_time(id):
     return id * 0.5
 
 
-for i in range(1, drone_number + 1):
+for i in range(1, DRONE_NUMBER + 1):
     t = np.arange(0, 5, 0.1)
-    plt.plot(f_approach_wait(f_inital_x(i, drone_number, 0.5), 0, f_finalPos_x(i), f_finalPos_y(i), drone_speed, t, start_time(i))['x'],
-             f_approach_wait(f_inital_x(i, drone_number, 0.5), 0, f_finalPos_x(
-                 i), f_finalPos_y(i), drone_speed, t, start_time(i))['y'],
+    plt.plot(f_approach_wait(f_inital_x(i, DRONE_NUMBER, 0.5), 0, f_finalPos_x(i), f_finalPos_y(i), DRONE_SPEED, t, start_time(i))['x'],
+             f_approach_wait(f_inital_x(i, DRONE_NUMBER, 0.5), 0, f_finalPos_x(
+                 i), f_finalPos_y(i), DRONE_SPEED, t, start_time(i))['y'],
              "r^")
     t = np.arange(0, 5, 0.1)
-    plt.plot(f_circle_x(i, t), f_circle_y(i, t), "b--")
+    plt.plot(f_circle_x(i, t), f_circle_y(i, t), "b^")
     t = np.arange(0, 5, 0.1)
-    plt.plot(f_approach_wait(f_finalPos_x(i), f_finalPos_y(i), f_inital_x(i, drone_number, 0.5), 0,  drone_speed, t, start_time(i))['x'],
+    plt.plot(f_approach_wait(f_finalPos_x(i), f_finalPos_y(i), f_inital_x(i, DRONE_NUMBER, 0.5), 0,  DRONE_SPEED, t, start_time(i))['x'],
              f_approach_wait(f_finalPos_x(i), f_finalPos_y(i), f_inital_x(
-                 i, drone_number, 0.5), 0, drone_speed, t, start_time(i))['y'],
+                 i, DRONE_NUMBER, 0.5), 0, DRONE_SPEED, t, start_time(i))['y'],
              "r^")
 
 
