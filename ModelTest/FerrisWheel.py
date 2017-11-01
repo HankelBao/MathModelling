@@ -44,6 +44,13 @@ def WaitAndApproachPosX(start_x. start_y. end_x. end_y. speed. t. w):
                      f_approach(start_x, start_y, end_x, end_y, speed, (t - w))['x'])
     return pos_x
 
+def WaitAndApproachPosY(start_x, start_y, end_x, end_y, speed, t, w):
+    pos_y = np.where(t < w,
+                     start_y,
+                     f_approach(start_x, start_y, end_x, end_y, speed, (t - w))['y'])
+    return pos_y
+
+
 def f_finalPos_x(drone_id):
     return CENTER['x'] + R * np.cos(angle * drone_id)
 
