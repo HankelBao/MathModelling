@@ -21,6 +21,7 @@ drone_id = np.arange(1, 11)
 DRONE_NUMBER = 10
 drone_speed = 3
 num = 1
+b = 4
 
 lines = []
 lines.append(DragonLine(0,11,5.5,0))
@@ -33,6 +34,10 @@ lines.append(DragonLine(22.5,19,27.5,32))
 lines.append(DragonLine(27.5,32,17,21))
 lines.append(DragonLine(17,21,19,31))
 lines.append(DragonLine(19,31,0,11))
+for c in range(10,95,5):
+    lines.append(DragonLine(np.pi*c,15+b,np.pi*(c+5),15+b*-1))
+    lines.append(DragonLine(np.pi*c,1+b,np.pi*(c+5),1+b*-1))
+    b = b * -1
 
 
 def AssignLineX(DragonLine, n, id):
@@ -72,18 +77,19 @@ def AssignDrone(lines, id):
             relative_id =id - (point_id - points)
             break
         line_id = line_id + 1
-        if line_id > 9:
+        if line_id > 50:
             line_id = 9
             break
     return line_id, relative_id, points
 #line = DragonLine(2,0,3,5)
-t = np.arange(0, 100, 0.1)
+t = np.arange(0, 1000, 0.1)
 
-
+# Here are lines for the head of the dragon
 for i in range(0,300):
     plt.scatter(AssignLineX(lines[AssignDrone(lines, i)[0]],AssignDrone(lines, i)[2],AssignDrone(lines, i)[1]),
                 AssignLineY(lines[AssignDrone(lines, i)[0]],AssignDrone(lines, i)[2],AssignDrone(lines, i)[1]),
                 )
+
     # DrawLine(lines[AssignDrone(lines, i)[0]],AssignDrone(lines, i)[2],t, AssignDrone(lines, i)[1]  )
     # DrawLine(lines[AssignDrone(lines, i)[0]],AssignDrone(lines, i)[2],t, AssignDrone(lines, i)[1]  )
 #     DrawLine(lines[i-1], 10, t, i)
@@ -101,5 +107,12 @@ for i in range(0,300):
 # for i in range(0,20):
 #     print(AssignDrone(lines, i))
 
-    
+
+
+
+
+
+
+
+
 plt.show()
