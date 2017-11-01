@@ -1,0 +1,85 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ANGULAR_SPEED	../ModelTest\AerialShowMap.py	/^ANGULAR_SPEED = 2 * np.pi \/ 60$/;"	kind:variable	line:39
+AerialShowMap.py	../ModelTest\AerialShowMap.py	1;"	kind:file	line:1
+ApproachPosX	../ModelTest\func.py	/^def ApproachPosX(start_x, start_y, end_x, end_y, speed, t):$/;"	kind:function	line:15
+ApproachPosY	../ModelTest\func.py	/^def ApproachPosY(start_x, start_y, end_x, end_y, speed, t):$/;"	kind:function	line:24
+ArriveTime	../ModelTest\func.py	/^def ArriveTime(n, y, r, d, v):$/;"	kind:function	line:57
+Axes3D	../ModelTest\Clock.py	/^from mpl_toolkits.mplot3d import Axes3D$/;"	kind:namespace	line:6
+Axes3D	../ModelTest\FerrisWheel.py	/^from mpl_toolkits.mplot3d import Axes3D$/;"	kind:namespace	line:6
+Axes3D	../ModelTest\test1.py	/^from mpl_toolkits.mplot3d import Axes3D$/;"	kind:namespace	line:6
+Clock.py	../ModelTest\Clock.py	1;"	kind:file	line:1
+ClockPosX	../ModelTest\func.py	/^def ClockPosX(CIRCLE, t, AS):$/;"	kind:function	line:51
+ClockPosY	../ModelTest\func.py	/^def ClockPosY(CIRCLE, t, AS):$/;"	kind:function	line:54
+DRONE_NUMBER	../ModelTest\AerialShowMap.py	/^DRONE_NUMBER = 11$/;"	kind:variable	line:13
+DRONE_NUMBER	../ModelTest\vanished dragon.py	/^DRONE_NUMBER = 10$/;"	kind:variable	line:19
+DRONE_SPEED	../ModelTest\AerialShowMap.py	/^DRONE_SPEED = 3$/;"	kind:variable	line:10
+FERRIS	../ModelTest\AerialShowMap.py	/^FERRIS = {}$/;"	kind:variable	line:17
+FRAME	../ModelTest\AerialShowMap.py	/^FRAME = {$/;"	kind:variable	line:30
+FRAME_DRONE_NUMBER	../ModelTest\AerialShowMap.py	/^FRAME_DRONE_NUMBER = 15$/;"	kind:variable	line:29
+FRAME_R	../ModelTest\AerialShowMap.py	/^FRAME_R = 4$/;"	kind:variable	line:28
+FerrisWheel.py	../ModelTest\FerrisWheel.py	1;"	kind:file	line:1
+HAND	../ModelTest\AerialShowMap.py	/^HAND = []$/;"	kind:variable	line:37
+HAND_DISTANCE	../ModelTest\AerialShowMap.py	/^HAND_DISTANCE = SAFETY_DISTANCE$/;"	kind:variable	line:27
+HAND_DRONE_NUMBER	../ModelTest\AerialShowMap.py	/^HAND_DRONE_NUMBER = math.floor(FRAME_R\/HAND_DISTANCE)$/;"	kind:variable	line:38
+InitialPos	../ModelTest\func.py	/^def InitialPos(drone_id, n, d):$/;"	kind:function	line:7
+SAFETY_DISTANCE	../ModelTest\AerialShowMap.py	/^SAFETY_DISTANCE = 0.5$/;"	kind:variable	line:14
+WaitAndApproachPosX	../ModelTest\func.py	/^def WaitAndApproachPosX(start_x, start_y, end_x, end_y, speed, t, w):$/;"	kind:function	line:33
+WaitAndApproachPosY	../ModelTest\func.py	/^def WaitAndApproachPosY(start_x, start_y, end_x, end_y, speed, t, w):$/;"	kind:function	line:39
+WaitTime	../ModelTest\func.py	/^def WaitTime(drone_id):$/;"	kind:function	line:10
+WheelPosX	../ModelTest\func.py	/^def WheelPosX(CIRCLE, drone_id, t):$/;"	kind:function	line:45
+WheelPosY	../ModelTest\func.py	/^def WheelPosY(CIRCLE, drone_id, t):$/;"	kind:function	line:48
+a	../ModelTest\test1.py	/^a = np.arange(1, 5, 0.1)$/;"	kind:variable	line:26
+asign_line	../ModelTest\vanished dragon.py	/^def asign_line(dragon_line, n, id):$/;"	kind:function	line:59
+b	../ModelTest\test1.py	/^b = np.linspace(1, 101, 40)$/;"	kind:variable	line:28
+bore.py	../ModelTest\bore.py	1;"	kind:file	line:1
+circles	../ModelTest\AerialShowMap.py	/^circles = 1$/;"	kind:variable	line:22
+dragon_line	../ModelTest\vanished dragon.py	/^def dragon_line(start_x, start_y, end_x, end_y):$/;"	kind:function	line:5
+draw_line	../ModelTest\vanished dragon.py	/^def draw_line(dragon_line, n, t):$/;"	kind:function	line:87
+drone_id	../ModelTest\vanished dragon.py	/^drone_id = np.arange(1, 11)$/;"	kind:variable	line:18
+drone_speed	../ModelTest\vanished dragon.py	/^drone_speed = 3$/;"	kind:variable	line:20
+f	../ModelTest\test1.py	/^def f(x):$/;"	kind:function	line:13
+f_approach	../ModelTest\vanished dragon.py	/^def f_approach(start_x, start_y, end_x, end_y, speed, t):$/;"	kind:function	line:72
+func	../ModelTest\test1.py	/^def func(x):$/;"	kind:function	line:9
+func.py	../ModelTest\func.py	1;"	kind:file	line:1
+fx	../ModelTest\test1.py	/^def fx(x):$/;"	kind:function	line:17
+fy	../ModelTest\test1.py	/^def fy(x):$/;"	kind:function	line:21
+get_length_of_line	../ModelTest\vanished dragon.py	/^def get_length_of_line(line_item):$/;"	kind:function	line:14
+line	../ModelTest\vanished dragon.py	/^line = dragon_line(5.5,0,29, 4.5)$/;"	kind:variable	line:92
+math	../ModelTest\AerialShowMap.py	/^import math$/;"	kind:namespace	line:5
+matplotlib	../ModelTest\Clock.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+matplotlib	../ModelTest\FerrisWheel.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+matplotlib	../ModelTest\bore.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+matplotlib	../ModelTest\func.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+matplotlib	../ModelTest\test1.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+matplotlib	../ModelTest\vanished dragon.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:1
+np	../ModelTest\AerialShowMap.py	/^import numpy as np$/;"	kind:namespace	line:4
+np	../ModelTest\Clock.py	/^import numpy as np$/;"	kind:namespace	line:2
+np	../ModelTest\FerrisWheel.py	/^import numpy as np$/;"	kind:namespace	line:2
+np	../ModelTest\bore.py	/^import numpy as np$/;"	kind:namespace	line:2
+np	../ModelTest\func.py	/^import numpy as np$/;"	kind:namespace	line:2
+np	../ModelTest\test1.py	/^import numpy as np$/;"	kind:namespace	line:2
+np	../ModelTest\vanished dragon.py	/^import numpy as np$/;"	kind:namespace	line:2
+num	../ModelTest\vanished dragon.py	/^num = 1$/;"	kind:variable	line:21
+others.py	../ModelTest\others.py	1;"	kind:file	line:1
+plt	../ModelTest\Clock.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+plt	../ModelTest\FerrisWheel.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+plt	../ModelTest\bore.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+plt	../ModelTest\func.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+plt	../ModelTest\test1.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:4
+plt	../ModelTest\vanished dragon.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:1
+points	../ModelTest\vanished dragon.py	/^points = []$/;"	kind:variable	line:22
+return_pos	../ModelTest\vanished dragon.py	/^def return_pos(x, y):$/;"	kind:function	line:65
+t	../ModelTest\Clock.py	/^    t = np.arange(0, 10, 0.1)$/;"	kind:variable	line:17
+t	../ModelTest\Clock.py	/^    t = np.arange(0, ArriveTime(FRAME_DRONE_NUMBER, FRAME['y'], FRAME['R'], DRONE_SPEED, SAFETY_DISTANCE), 0.1)$/;"	kind:variable	line:11
+t	../ModelTest\FerrisWheel.py	/^    t = np.arange(0, 20, 0.1)$/;"	kind:variable	line:17
+t	../ModelTest\FerrisWheel.py	/^    t = np.arange(0, 5, 0.1)$/;"	kind:variable	line:20
+t	../ModelTest\FerrisWheel.py	/^    t = np.arange(0, ArriveTime(DRONE_NUMBER, FERRIS['y'], FERRIS['R'], DRONE_SPEED, SAFETY_DISTANCE), 0.1)$/;"	kind:variable	line:12
+t	../ModelTest\vanished dragon.py	/^t = np.arange(0, 100, 0.1)$/;"	kind:variable	line:93
+test1.py	../ModelTest\test1.py	1;"	kind:file	line:1
+vanished dragon.py	../ModelTest\vanished dragon.py	1;"	kind:file	line:1
+z	../ModelTest\test1.py	/^z = np.arange(0, 2 * np.pi, 0.01)$/;"	kind:variable	line:47

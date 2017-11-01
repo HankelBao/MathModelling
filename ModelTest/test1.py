@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # 3D
 from mpl_toolkits.mplot3d import Axes3D
 
-aasdfas
+
 def func(x):
     return np.sin(x)
 
@@ -33,7 +33,7 @@ plt.grid(True)
 plt.title("magic title")
 plt.xlabel("This is x label")
 plt.ylabel("This is y label")
-plt.plot(a, b, 'r^')
+plt.plot(a, b, 'R^')
 # plot 就是连线
 # scatter就是画点
 # bar 就是柱状图
@@ -41,7 +41,7 @@ plt.plot(a, b, 'r^')
 plt.subplot(132)
 plt.title("Pic 2")
 plt.scatter(a, fx(a) + fy(a))
-plt.plot(a, fx(a) + 1.1, "r--")
+plt.plot(a, fx(a) + 1.1, "R--")
 
 plt.subplot(133, projection='3d')
 z = np.arange(0, 2 * np.pi, 0.01)
