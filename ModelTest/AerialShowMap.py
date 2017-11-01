@@ -10,14 +10,14 @@ import math
 DRONE_SPEED = 3
 
 # Varibles for drone group
-DRONE_NUMBER = 11
-SAFETY_DISTANCE = 0.5
+DRONE_NUMBER = 300
+SAFETY_DISTANCE = 1.5
 
 # Varibles for FerrisWheel
 FERRIS = {}
 FERRIS['x'] = 0
-FERRIS['y'] = 5
-FERRIS['R'] = 4
+FERRIS['y'] = 50
+FERRIS['R'] = 40
 FERRIS['A'] = 2 * np.pi / DRONE_NUMBER
 circles = 1
 
