@@ -1,8 +1,10 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from AerialShowMap import *
+from func import *
+import math
 
-
-def dragon_line(start_x, start_y, end_x, end_y):
+def DragonLine(start_x, start_y, end_x, end_y):
     item = {}
     item['start_x'] = start_x
     item['end_x'] = end_x
@@ -11,7 +13,7 @@ def dragon_line(start_x, start_y, end_x, end_y):
     return item
 
 
-def get_length_of_line(line_item):
+def GetLengthOfLine(line_item):
     return np.sqrt((line_item['end_x'] - line_item['start_x'])**2 + (line_item['end_y'] - line_item['start_y'])**2)
 
 
@@ -21,68 +23,83 @@ drone_speed = 3
 num = 1
 
 lines = []
-lines.append(dragon_line(0,11,5.5,0))
-lines.append(dragon_line(5.5,0,29,4.5))
-lines.append(dragon_line(29,4.5,30.5,2))
-lines.append(dragon_line(30.5,2,30,13))
-lines.append(dragon_line(30,13,33,19))
-lines.append(dragon_line(33,19,22.5,19))
-lines.append(dragon_line(22.5,19,27.5,32))
-lines.append(dragon_line(27.5,32,17,21))
-lines.append(dragon_line(17,21,19,31))
-lines.append(dragon_line(19,31,0,11))
+lines.append(DragonLine(0,11,5.5,0))
+lines.append(DragonLine(5.5,0,29,4.5))
+lines.append(DragonLine(29,4.5,30.5,2))
+lines.append(DragonLine(30.5,2,30,13))
+lines.append(DragonLine(30,13,33,19))
+lines.append(DragonLine(33,19,22.5,19))
+lines.append(DragonLine(22.5,19,27.5,32))
+lines.append(DragonLine(27.5,32,17,21))
+lines.append(DragonLine(17,21,19,31))
+lines.append(DragonLine(19,31,0,11))
 
 
-def asign_line(dragon_line, n, id):
-    x = dragon_line['start_x'] + (dragon_line['end_x'] - dragon_line['start_x'])*id/n
-    y = dragon_line['start_y'] + (dragon_line['end_y'] - dragon_line['start_y'])*id/n
-    return return_pos(x,y)
+def AssignLineX(DragonLine, n, id):
+    x = DragonLine['start_x'] + (DragonLine['end_x'] - DragonLine['start_x'])*id/n
+    return x
+def AssignLineY(DragonLine, n, id):
+    y = DragonLine['start_y'] + (DragonLine['end_y'] - DragonLine['start_y'])*id/n
+    return y
 
 
-def return_pos(x, y):
+def ReturnPos(x, y):
     pos = {}
     pos['x'] = x
     pos['y'] = y
     return pos
 
 
-def f_approach(start_x, start_y, end_x, end_y, speed, t):
-    step_length = speed / \
-        np.sqrt((end_x - start_x)**2 + (end_y - start_y)**2)
-    step_length_x = step_length * (end_x - start_x)
-    step_length_y = step_length * (end_y - start_y)
-
-    pos_x = start_x + step_length_x * t
-    pos_y = start_y + step_length_y * t
-    pos_x = np.where(np.absolute(step_length_x) * t > np.absolute(end_x - start_x),
-                     end_x, pos_x)
-    pos_y = np.where(np.absolute(step_length_y) * t > np.absolute(end_y - start_y),
-                     end_y, pos_y)
-
-    return return_pos(pos_x, pos_y)
 
 
-def draw_line(dragon_line, n, t):
+
+def DrawLine(DragonLine, n, t, id):
     for i in range(1,n):
-        pos = f_approach(0,0, asign_line(dragon_line, 10,i)['x'],asign_line(dragon_line, 10,i)['y'], 3, t)
-        print(asign_line(dragon_line, n, i))
-        plt.plot(pos['x'], pos['y'], 'r--')
+        posX = WaitAndApproachPosX(0,0, AssignLineX(DragonLine, 10,i),AssignLineY(DragonLine, 10,i), 3, t, WaitTime(id))
+        posY = WaitAndApproachPosY(0,0, AssignLineX(DragonLine, 10,i),AssignLineY(DragonLine, 10,i), 3, t, WaitTime(id))
+        #print(AssignLine(DragonLine, n, i))
+        plt.plot(posX, posY, 'r--')
 
-
-#line = dragon_line(2,0,3,5)
+def AssignDrone(lines, id):
+    line_id = 0
+    point_id = 0
+    relative_id = 0
+    points = 0
+    while True:
+        points = math.floor(GetLengthOfLine(lines[line_id])/SAFETY_DISTANCE)
+        point_id = point_id + points
+        if id < point_id:
+            relative_id =id - (point_id - points)
+            break
+        line_id = line_id + 1
+        if line_id > 9:
+            line_id = 9
+            break
+    return line_id, relative_id, points
+#line = DragonLine(2,0,3,5)
 t = np.arange(0, 100, 0.1)
-   
-draw_line(lines[0], 10, t)
-draw_line(lines[1], 10, t)
-draw_line(lines[2], 10, t)
-draw_line(lines[3], 10, t)
-draw_line(lines[4], 10, t)
-draw_line(lines[5], 10, t)
-draw_line(lines[6], 10, t)
-draw_line(lines[7], 10, t)
-draw_line(lines[8], 10, t)
-draw_line(lines[9], 10, t)
 
+
+for i in range(0,300):
+    plt.scatter(AssignLineX(lines[AssignDrone(lines, i)[0]],AssignDrone(lines, i)[2],AssignDrone(lines, i)[1]),
+                AssignLineY(lines[AssignDrone(lines, i)[0]],AssignDrone(lines, i)[2],AssignDrone(lines, i)[1]),
+                )
+    # DrawLine(lines[AssignDrone(lines, i)[0]],AssignDrone(lines, i)[2],t, AssignDrone(lines, i)[1]  )
+    # DrawLine(lines[AssignDrone(lines, i)[0]],AssignDrone(lines, i)[2],t, AssignDrone(lines, i)[1]  )
+#     DrawLine(lines[i-1], 10, t, i)
+    #print(GetLengthOfLine(lines[i]))
+    # DrawLine(lines[i-1], 10, t, i)
+    # DrawLine(lines[i-1], 10, t, i)
+    # DrawLine(lines[i-1], 10, t, i)
+    # DrawLine(lines[i-1], 10, t, i)
+    # DrawLine(lines[i-1], 10, t, i)
+    # DrawLine(lines[i-1], 10, t, i)
+    # DrawLine(lines[i-1], 10, t, i)
+    # DrawLine(lines[i-1], 10, t, i)
+    # DrawLine(lines[i-1], 10, t, i)
+
+# for i in range(0,20):
+#     print(AssignDrone(lines, i))
 
     
 plt.show()

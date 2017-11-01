@@ -10,7 +10,7 @@ DRONE_SPEED = 3
 
 # Varibles for drone group
 DRONE_NUMBER = 10
-SAFETY_DISTANCE = 0.5
+SAFETY_DISTANCE = 1.5
 
 # Varibles for FerrisWheel
 CENTER = {}
