@@ -19,42 +19,19 @@ drone_id = np.arange(1, 11)
 DRONE_NUMBER = 10
 drone_speed = 3
 num = 1
-points = []
-points.append(dragon_line(0,0,11,5.5))
-points.append(dragon_line(0, 5.5, 0,29))
-#points.append(4.5)
-#points.append(29)
-#points.append(4.5)
-#points.append(30.5)
-#points.append(2)
-#points.append(30.5)
-#points.append(2)
-#points.append(30)
-#points.append(13)
-#points.append(30)
-#points.append(13)
-#points.append(33)
-#points.append(19)
-#points.append(33)
-#points.append(19)
-#points.append(22.5)
-#points.append(19)
-#points.append(22.5)
-#points.append(19)
-#points.append(27.5)
-#points.append(32)
-#points.append(27.5)
-#points.append(32)
-#points.append(17)
-#points.append(21)
-#points.append(17)
-#points.append(21)
-#points.append(19)
-#points.append(31)
-#points.append(19)
-#points.append(31)
-#points.append(0)
-#points.append(11)
+
+lines = []
+lines.append(dragon_line(0,11,5.5,0))
+lines.append(dragon_line(5.5,0,29,4.5))
+lines.append(dragon_line(29,4.5,30.5,2))
+lines.append(dragon_line(30.5,2,30,13))
+lines.append(dragon_line(30,13,33,19))
+lines.append(dragon_line(33,19,22.5,19))
+lines.append(dragon_line(22.5,19,27.5,32))
+lines.append(dragon_line(27.5,32,17,21))
+lines.append(dragon_line(17,21,19,31))
+lines.append(dragon_line(19,31,0,11))
+
 
 def asign_line(dragon_line, n, id):
     x = dragon_line['start_x'] + (dragon_line['end_x'] - dragon_line['start_x'])*id/n
@@ -84,12 +61,28 @@ def f_approach(start_x, start_y, end_x, end_y, speed, t):
 
     return return_pos(pos_x, pos_y)
 
-def draw_line(dragon_line, n, t):
-    for i in range(0,n):
-        pos = f_approach(0,0, asign_line(dragon_line, n-1,i)['x'],asign_line(dragon_line, n-1,i)['y'], 1, t)
-        plt.plot(pos['x'], pos['y'], 'r^')
 
-line = dragon_line(5.5,0,29, 4.5)
+def draw_line(dragon_line, n, t):
+    for i in range(1,n):
+        pos = f_approach(0,0, asign_line(dragon_line, 10,i)['x'],asign_line(dragon_line, 10,i)['y'], 3, t)
+        print(asign_line(dragon_line, n, i))
+        plt.plot(pos['x'], pos['y'], 'r--')
+
+
+#line = dragon_line(2,0,3,5)
 t = np.arange(0, 100, 0.1)
-draw_line(line, 3, t)
+   
+draw_line(lines[0], 10, t)
+draw_line(lines[1], 10, t)
+draw_line(lines[2], 10, t)
+draw_line(lines[3], 10, t)
+draw_line(lines[4], 10, t)
+draw_line(lines[5], 10, t)
+draw_line(lines[6], 10, t)
+draw_line(lines[7], 10, t)
+draw_line(lines[8], 10, t)
+draw_line(lines[9], 10, t)
+
+
+    
 plt.show()
