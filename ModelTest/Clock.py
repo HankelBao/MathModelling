@@ -1,8 +1,5 @@
-# numpy
 import numpy as np
-# pyplot
 import matplotlib.pyplot as plt
-# 3D
 from mpl_toolkits.mplot3d import Axes3D
 from AerialShowMap import *
 from func import *
@@ -40,4 +37,5 @@ plt.plot(WaitAndApproachPosX(InitialPos(i, DRONE_NUMBER, 0.5), 0, WheelPosX(FRAM
 
 t = np.arange(0, 30, 0.1)
 plt.plot(ClockPosX(HAND[i], t, ANGULAR_SPEED), ClockPosY(HAND[i], t, ANGULAR_SPEED), "b^")
+
 plt.show()

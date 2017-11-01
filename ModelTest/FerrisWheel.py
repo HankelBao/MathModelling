@@ -1,8 +1,5 @@
-# numpy
 import numpy as np
-# pyplot
 import matplotlib.pyplot as plt
-# 3D
 from mpl_toolkits.mplot3d import Axes3D
 from AerialShowMap import *
 from func import *
@@ -23,7 +20,6 @@ def set_t_land():
     global t 
     t = np.arange(0, ArriveTime(DRONE_NUMBER, FERRIS['y'], FERRIS['R'], DRONE_SPEED, SAFETY_DISTANCE), 1)
 
-"""111111111111111111111111111111111111111111111111111111"""
 plt.subplot(231)
 plt.title("Drone Id 155's trail")
 plt.axis([-100, 100, 0, 100])
@@ -41,9 +37,6 @@ plt.plot(WaitAndApproachPosX(WheelPosX(FERRIS, i, 0), WheelPosY(FERRIS, i, 0), I
          WaitAndApproachPosY(WheelPosX(FERRIS, i, 0), WheelPosY(FERRIS, i, 0), InitialPos(i, DRONE_NUMBER, 0.5), 0, DRONE_SPEED, t, WaitTime(i)),
          "r^")
 
-
-
-""" 2222222222222222222222222222222222222222222222222"""
 plt.subplot(232)
 plt.title("Drone Id 0's trail")
 plt.axis([-100, 100, 0, 100])
@@ -61,7 +54,6 @@ plt.plot(WaitAndApproachPosX(WheelPosX(FERRIS, i, 0), WheelPosY(FERRIS, i, 0), I
          WaitAndApproachPosY(WheelPosX(FERRIS, i, 0), WheelPosY(FERRIS, i, 0), InitialPos(i, DRONE_NUMBER, 0.5), 0, DRONE_SPEED, t, WaitTime(i)),
          "r^")
 
-""" 333333333333333333333333333333333333333333333333"""
 plt.subplot(233)
 plt.title("Trail of all Drones")
 plt.axis([-100, 100, 0, 100])
@@ -128,4 +120,5 @@ plt.plot(WaitAndApproachPosX(WheelPosX(FERRIS, i, 0), WheelPosY(FERRIS, i, 0), I
          WaitAndApproachPosY(WheelPosX(FERRIS, i, 0), WheelPosY(FERRIS, i, 0), InitialPos(i, DRONE_NUMBER, 0.5), 0, DRONE_SPEED, t, WaitTime(i)),
          "r^")
 plt.axis([-100, 100, 0, 100])
+
 plt.show()
