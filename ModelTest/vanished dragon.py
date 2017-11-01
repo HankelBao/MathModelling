@@ -89,7 +89,7 @@ def draw_line(dragon_line, n, t):
         pos = f_approach(0,0, asign_line(dragon_line, n-1,i)['x'],asign_line(dragon_line, n-1,i)['y'], 1, t)
         plt.plot(pos['x'], pos['y'], 'r^')
 
-line = dragon_line(2,0,3,5)
-t = np.arange(0, 10, 0.1)
+line = dragon_line(5.5,0,29, 4.5)
+t = np.arange(0, 100, 0.1)
 draw_line(line, 3, t)
 plt.show()
