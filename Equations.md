@@ -1,4 +1,4 @@
-# Equations
+# Equations for Ferris Wheel
 
 #### The initial positions
 
@@ -22,7 +22,7 @@ d is the distance between drones
 
 $$
 \begin{equation}
-f(id, t) = id \times (t-1)
+f(id, v, d) = id \times \frac{d}{v}
 \end{equation}
 $$
 
@@ -137,12 +137,37 @@ v is speed
 #### The final equation of the Ferris Show
 
 $$
-f(id, t, n,x,d, y, r, v, cn) = \begin{cases}
+f(id, t, n,x,d, y, r, v, cn) = 
+\begin{cases}
 f_{WaitAndApproachPosX}(f_{InitialPos}(id, x, n,d), 0 , f_{WheelPosX}(id, n, x, r, i, 0),  f_{WheelPosY}(id, n, y, r, i, 0), v, t, f_{WaitTime}(id, t)) &{t < f_{ArriveTime}}, \\
 f_{WheelPosX}(id, n, x, r, v, t-f_{ArriveTime}) &{f_{ArriveTime} < t < f_{ArriveTime}+ f_{CircleTime}*cn}, \\
 f_{WaitAndApproachPosX}(f_{WheelPosX}(id, n, x, r, i, 0),  f_{WheelPosY}(id, n, y, r, i, 0),f_{InitialPos}(id, x, n,d), 0, v, t-f_{ArriveTime}-f_{CircleTime}, f_{WaitTime}(id,t)) & {f_{ArriveTime}+f_{CircleTime}*cn < t < 2*f_{ArriveTime}+f_{CircleTime}*cn}
 \end{cases}
 $$
+
+# The equations for The Clock
+
+#### The final positions of the hands in hands id
+
+$$
+\begin{equation}
+f(y, r, d, id) = y+id \times floor(\frac{r}{d}) 
+\end{equation}
+$$
+
+#### The final equation
+
+$$
+f(id, t, n,x,d, y, r, v, cn) = 
+\begin{cases}
+f_{WaitAndApproachPosX}({f_{InitialPos}(id, x, n,d), 0 }\right. \\
+\left. {, f_{WheelPosX}(id, n, x, r, i, 0),  f_{WheelPosY}(id, n, y, r, i, 0), v, t, f_{WaitTime}(id, t)}) &{t < f_{ArriveTime}}, \\
+f_{WheelPosX}(id, n, x, r, v, t-f_{ArriveTime}) &{f_{ArriveTime} < t < f_{ArriveTime}+ f_{CircleTime}*cn}, \\
+f_{WaitAndApproachPosX}(f_{WheelPosX}(id, n, x, r, i, 0),  f_{WheelPosY}(id, n, y, r, i, 0),f_{InitialPos}(id, x, n,d), 0, v, t-f_{ArriveTime}-f_{CircleTime}, f_{WaitTime}(id,t)) & {f_{ArriveTime}+f_{CircleTime}*cn < t < 2*f_{ArriveTime}+f_{CircleTime}*cn}
+\end{cases}
+$$
+
+
 
 
 

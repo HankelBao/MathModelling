@@ -42,11 +42,17 @@ def WaitAndApproachPosY(start_x, start_y, end_x, end_y, speed, t, w):
                      ApproachPosY(start_x, start_y, end_x, end_y, speed, (t - w)))
     return pos_y
 
-def WheelPosX(drone_id, t):
-    return CENTER['x'] + R * np.cos(angle * drone_id + DRONE_SPEED / R * t)
+def WheelPosX(CIRCLE, drone_id, t):
+    return CIRCLE['x'] + CIRCLE['R'] * np.cos(CIRCLE['A'] * drone_id + DRONE_SPEED / CIRCLE['R'] * t)
 
-def WheelPosY(drone_id, t):
-    return CENTER['y'] + R * np.sin(angle * drone_id + DRONE_SPEED / R * t)
+def WheelPosY(CIRCLE, drone_id, t):
+    return CIRCLE['y'] + CIRCLE['R'] * np.sin(CIRCLE['A'] * drone_id + DRONE_SPEED / CIRCLE['R'] * t)
+
+def ClockPosX(CIRCLE, t, AS):
+    return CIRCLE['x'] + CIRCLE['R'] * np.cos(t*AS)
+
+def ClockPosY(CIRCLE, t, AS):
+    return CIRCLE['y'] + CIRCLE['R'] * np.sin(t*AS)
 
 def ArriveTime(n, y, r, d, v):
     return np.sqrt((y+r)**2+InitialPos(n/4, n, d)**2)/v + WaitTime(n/4)

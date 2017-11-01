@@ -7,37 +7,14 @@ from mpl_toolkits.mplot3d import Axes3D
 from AerialShowMap import *
 from func import *
 
-
-for i in range(1, DRONE_NUMBER + 1):
-    t = np.arange(0, ArriveTime(DRONE_NUMBER, CENTER['y'], R, DRONE_SPEED, SAFETY_DISTANCE), 0.1)
-    plt.plot(WaitAndApproachPosX(InitialPos(i, DRONE_NUMBER, 0.5), 0, WheelPosX(i, 0), WheelPosY(i, 0), DRONE_SPEED, t, WaitTime(i)),
-             WaitAndApproachPosY(InitialPos(i, DRONE_NUMBER, 0.5), 0, WheelPosX(i, 0), WheelPosY(i, 0), DRONE_SPEED, t, WaitTime(i)),
+for i in range(1, FRAME_DRONE_NUMBER + 1):
+    t = np.arange(0, ArriveTime(FRAME_DRONE_NUMBER, FRAME['y'], FRAME['R'], DRONE_SPEED, SAFETY_DISTANCE), 0.1)
+    plt.plot(WaitAndApproachPosX(InitialPos(i, DRONE_NUMBER, 0.5), 0, WheelPosX(FRAME, i, 0), WheelPosY(FRAME, i, 0), DRONE_SPEED, t, WaitTime(i)),
+             WaitAndApproachPosY(InitialPos(i, DRONE_NUMBER, 0.5), 0, WheelPosX(FRAME, i, 0), WheelPosY(FRAME, i, 0), DRONE_SPEED, t, WaitTime(i)),
              "r^")
 
-    t = np.arange(0, 20, 0.1)
-    plt.plot(WheelPosX(i, t), WheelPosY(i, t), "b^")
+for i in range(1, 4):
+    t = np.arange(0, 10, 0.1)
+    plt.plot(ClockPosX(HAND[i], t, ANGULAR_SPEED), ClockPosY(HAND[i], t, ANGULAR_SPEED), "b^")
 
-
-
-plt.plot(WaitAndApproachPosX(InitialPos(i, DRONE_NUMBER-1, 0.5), 0, 0, 5, DRONE_SPEED, t, WaitTime(i)),
-        WaitAndApproachPosY(InitialPos(i, DRONE_NUMBER-1, 0.5), 0, 0, 5, DRONE_SPEED, t, WaitTime(i)),
-        "r^")
-plt.plot(WaitAndApproachPosX(InitialPos(i, DRONE_NUMBER-2, 0.5), 0, 0, 5.5, DRONE_SPEED, t, WaitTime(i)),
-        WaitAndApproachPosY(InitialPos(i, DRONE_NUMBER-2, 0.5), 0, 0, 5.5, DRONE_SPEED, t, WaitTime(i)),
-        "r^")
-plt.plot(WaitAndApproachPosX(InitialPos(i, DRONE_NUMBER-3, 0.5), 0, 0, 6, DRONE_SPEED, t, WaitTime(i)),
-        WaitAndApproachPosY(InitialPos(i, DRONE_NUMBER-3, 0.5), 0, 0, 6, DRONE_SPEED, t, WaitTime(i)),
-        "r^")
-plt.plot(WaitAndApproachPosX(InitialPos(i, DRONE_NUMBER-4, 0.5), 0, 0, 6.5, DRONE_SPEED, t, WaitTime(i)),
-        WaitAndApproachPosY(InitialPos(i, DRONE_NUMBER-4, 0.5), 0, 0, 6.5, DRONE_SPEED, t, WaitTime(i)),
-        "r^")
-plt.plot(WaitAndApproachPosX(InitialPos(i, DRONE_NUMBER-5, 0.5), 0, 0, 7, DRONE_SPEED, t, WaitTime(i)),
-        WaitAndApproachPosY(InitialPos(i, DRONE_NUMBER-5, 0.5), 0, 0, 7, DRONE_SPEED, t, WaitTime(i)),
-        "r^")
-plt.plot(WaitAndApproachPosX(InitialPos(i, DRONE_NUMBER-6, 0.5), 0, 0, 7.5, DRONE_SPEED, t, WaitTime(i)),
-        WaitAndApproachPosY(InitialPos(i, DRONE_NUMBER-6, 0.5), 0, 0, 7.5, DRONE_SPEED, t, WaitTime(i)),
-        "r^")
-plt.plot(WaitAndApproachPosX(InitialPos(i, DRONE_NUMBER-7, 0.5), 0, 0, 8, DRONE_SPEED, t, WaitTime(i)),
-        WaitAndApproachPosY(InitialPos(i, DRONE_NUMBER-7, 0.5), 0, 0, 8, DRONE_SPEED, t, WaitTime(i)),
-        "r^")
 plt.show()
