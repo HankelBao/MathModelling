@@ -7,13 +7,6 @@ from mpl_toolkits.mplot3d import Axes3D
 from AerialShowMap import *
 from func import *
 
-def return_pos(x, y):
-    pos = {}
-    pos['x'] = x
-    pos['y'] = y
-    return pos
-
-
 
 for i in range(1, DRONE_NUMBER + 1):
     t = np.arange(0, ArriveTime(DRONE_NUMBER, CENTER['y'], R, DRONE_SPEED, SAFETY_DISTANCE), 0.1)

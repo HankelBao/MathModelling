@@ -19,7 +19,6 @@ def ApproachPosX(start_x, start_y, end_x, end_y, speed, t):
     pos_x = start_x + step_length_x * t
     pos_x = np.where(np.absolute(step_length_x) * t > np.absolute(end_x - start_x),
                      end_x, pos_x)
-
     return pos_x
 
 def ApproachPosY(start_x, start_y, end_x, end_y, speed, t):
@@ -29,7 +28,6 @@ def ApproachPosY(start_x, start_y, end_x, end_y, speed, t):
     pos_y = start_y + step_length_y * t
     pos_y = np.where(np.absolute(step_length_y) * t > np.absolute(end_y - start_y),
                      end_y, pos_y)
-
     return pos_y
 
 def WaitAndApproachPosX(start_x, start_y, end_x, end_y, speed, t, w):
@@ -49,8 +47,6 @@ def WheelPosX(drone_id, t):
 
 def WheelPosY(drone_id, t):
     return CENTER['y'] + R * np.sin(angle * drone_id + DRONE_SPEED / R * t)
-def f_finalPos_x(drone_id):
-    return CENTER['x'] + R * np.cos(angle * drone_id)
 
 def ArriveTime(n, y, r, d, v):
     return np.sqrt((y+r)**2+InitialPos(n/4, n, d)**2)/v + WaitTime(n/4)
