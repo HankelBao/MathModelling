@@ -19,7 +19,7 @@ def ApproachPosX(start_x, start_y, end_x, end_y, speed, t):
                      end_x, pos_x)
     return pos_x
 
-def ApproachPosY(start_x, start_y, end_x, end_y, speed, t):
+def ApproachPosY(start_x, start_y, end_x, end_y, speed, t)  :
     step_length = speed / \
         np.sqrt((end_x - start_x)**2 + (end_y - start_y)**2)
     step_length_y = step_length * (end_y - start_y)

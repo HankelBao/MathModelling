@@ -3,9 +3,7 @@
 #### The initial positions
 
 $$
-\begin{equation}
 f(id, x, n, d) = x-\frac{(n-1) \times d}{2} + d \times (id-1)
-\end{equation}
 $$
 
 We call $f(id,n,d)$ as $f_{InitialPos}$
@@ -22,9 +20,7 @@ d is the distance between drones
 #### The waiting time
 
 $$
-\begin{equation}
 f(id, v, d) = id \times \frac{d}{v}
-\end{equation}
 $$
 
 We call $f(id, t)$ as $f_{WaitTime}$
@@ -114,20 +110,14 @@ t is the time
 #### Time taken for going to the right position in Ferries
 
 $$
-\begin{equation}
 f(n, y, r, d, v) = \frac{\sqrt{(y+r)^2 +  (f_{InitialPos(\frac{n}{4}, 0, n, d)})^2}}{v} + f_{WaitTime}(\frac{n}{4}, 0)
-\end{equation}
 $$
 
 We call $f(n, y, r, d, v) $ as $f_{ArriveTime}$
 
 #### Time taken for a complete circle
 
-$$
-\begin{equation}
 f(r, v) = \frac{2  \pi r}{v}
-\end{equation}
-$$
 
 We call $f(r, v) $ as $f_{CircleTime}$
 
@@ -139,14 +129,14 @@ v is speed
 
 Since the formulae are too long, we define some of them as,
 $$
-\begin{align}
+\begin{aligned}
     f_a &=f_{InitialPos}(id, x, n,d) \\
     f_b &=  f_{WheelPosX}(id, n, x, r, i, 0) \\
     f_c &= f_{WheelPosY}(id, n, y, r, i, 0) \\
     f_d &=f_{WaitTime}(id, t) \\
     f_e &=f_{ArriveTime}(n, y, r, d, v) \\
     f_f &=f_{CircleTime}(r, v)
-\end{align}\\
+\end{aligned}
 $$
 
 so,
@@ -165,9 +155,7 @@ $$
 #### The final positions of the hands in hands id
 
 $$
-\begin{equation}
 f(y, r, d, id) = y+id \times floor(\frac{r}{d})
-\end{equation}
 $$
 
 #### The final equation

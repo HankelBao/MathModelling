@@ -9,15 +9,15 @@ def set_t(time):
     t = np.arange(0, time, 1)
 
 def set_t_takeoff():
-    global t 
+    global t
     t = np.arange(0, ArriveTime(DRONE_NUMBER, FERRIS['y'], FERRIS['R'], DRONE_SPEED, SAFETY_DISTANCE), 1)
 
 def set_t_round():
-    global t 
+    global t
     t = np.arange(0, 50, 1)
 
 def set_t_land():
-    global t 
+    global t
     t = np.arange(0, ArriveTime(DRONE_NUMBER, FERRIS['y'], FERRIS['R'], DRONE_SPEED, SAFETY_DISTANCE), 1)
 
 plt.subplot(231)
